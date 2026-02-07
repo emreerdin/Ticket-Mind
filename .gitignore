@@ -1,0 +1,80 @@
+# ======================
+# Environment & secrets
+# ======================
+.env
+.env.*
+!.env.example
+
+# ======================
+# Python bytecode
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ======================
+# Virtual environments
+# ======================
+.venv/
+venv/
+env/
+ENV/
+
+# ======================
+# Packaging / build
+# ======================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ======================
+# Test / coverage
+# ======================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ======================
+# Logs & runtime
+# ======================
+*.log
+*.pid
+
+# ======================
+# Editor / OS junk
+# ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ======================
+# Docker
+# ======================
+docker-data/
+*.tar
+
+# ======================
+# Databases / local state
+# ======================
+*.sqlite3
+*.db
+
+# ======================
+# Node (if frontend sneaks in)
+# ======================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ======================
+# Misc
+# ======================
+.cache/
+.mypy_cache/
+.ruff_cache/

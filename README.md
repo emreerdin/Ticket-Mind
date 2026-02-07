@@ -81,27 +81,46 @@ All relevant policies apply **cumulatively** to constrain decisions.
 ```
 ticketmind/
 ├── agent/
-│   ├── fsm.py
-│   ├── states.py
+│   ├── contracts/
+│   │   └── ticket_input.py
+│   ├── domain/
+│   │   └── risk.py
 │   ├── handlers/
-│   │   ├── ingest_handler.py
-│   │   ├── validate_handler.py
-│   │   ├── triage_handler.py
+│   │   ├── decide_handler.py
 │   │   ├── enrich_handler.py
+│   │   ├── ingest_handler.py
 │   │   ├── retrieve_policy_handler.py
-│   │   └── decide_handler.py
-│   └── domain/
-│       └── risk.py
+│   │   ├── triage_handler.py
+│   │   └── validate_handler.py
+│   ├── policies/
+│   ├── agent_fsm.py
+│   └── states.py
 │
-├── policies/
-│   └── policies.py
+├── db/
+│   ├── migrations/
+│   ├── repos/
+│   │   ├── agent_runs.py
+│   │   ├── tickets_repo.py
+│   │   └── users_repo.py
+│   └── connection.py
 │
 ├── llm/
-│   └── classifiers/
-│       └── spam_classifier.py
+│   ├── classifiers/
+│   │   ├── spam_classifier.py
+│   │   └── triage_classifier.py
+│   ├── prompts/
+│   │   ├── decision_prompt.py
+│   │   ├── spam_prompt.py
+│   │   └── triage_prompt.py
+│   └── llm_caller.py
 │
-└── pytest/
-    └── main.py
+├── pytest/
+│   └── main.py
+│
+├── ui/
+│   └── app.py
+│
+└── ticketmind_venv/
 ```
 
 ---
